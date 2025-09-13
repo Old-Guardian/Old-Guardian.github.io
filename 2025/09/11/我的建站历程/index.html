@@ -1,0 +1,349 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>我的建站历程 | Old Guard's Blogs</title><meta name="author" content="Old Guard"><meta name="copyright" content="Old Guard"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="这是我的第一篇博客，在此记录本站的建站历程。虽然称不上什么正经教程，但也希望能给后来想要建站的人们提供一点点参考，以及我踩过的坑😇 所有参考过的教程都在文中列出了网址，以供参考。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="我的建站历程">
+<meta property="og:url" content="https://old-guardian.github.io/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/index.html">
+<meta property="og:site_name" content="Old Guard&#39;s Blogs">
+<meta property="og:description" content="这是我的第一篇博客，在此记录本站的建站历程。虽然称不上什么正经教程，但也希望能给后来想要建站的人们提供一点点参考，以及我踩过的坑😇 所有参考过的教程都在文中列出了网址，以供参考。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://old-guardian.github.io/my_images/old_guard.jpg">
+<meta property="article:published_time" content="2025-09-11T12:59:28.000Z">
+<meta property="article:modified_time" content="2025-09-11T12:59:28.000Z">
+<meta property="article:author" content="Old Guard">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Next">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://old-guardian.github.io/my_images/old_guard.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "我的建站历程",
+  "url": "https://old-guardian.github.io/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/",
+  "image": "https://old-guardian.github.io/my_images/old_guard.jpg",
+  "datePublished": "2025-09-11T12:59:28.000Z",
+  "dateModified": "2025-09-11T12:59:28.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Old Guard",
+      "url": "https://old-guardian.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://old-guardian.github.io/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '我的建站历程',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/footer.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/my_images/my_default_top_image.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/my_images/old_guard.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Old Guard's Blogs</span></a><a class="nav-page-title" href="/"><span class="site-name">我的建站历程</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">我的建站历程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-09-11T12:59:28.000Z" title="发表于 2025-09-11 20:59:28">2025-09-11</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-11T12:59:28.000Z" title="更新于 2025-09-11 20:59:28">2025-09-11</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">3.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>11分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img gist" style="background-image: url(/null)"></div><article class="container post-content" id="article-container"><p>这是我的第一篇博客，在此记录本站的建站历程。虽然称不上什么正经教程，但也希望能给后来想要建站的人们提供一点点参考，以及我踩过的坑😇</p>
+<p>所有参考过的教程都在文中列出了网址，以供参考。</p>
+<span id="more"></span>
+<h1 id="hexonext主题">Hexo+Next主题</h1>
+<p>我的第一个博客站点使用的是Next主题，不得不说网上关于Next主题的教程虽然很多，但相当一部分都稍显老旧，很多时候不得不依靠多篇教程交叉参考。相比之下Butterfly主题的教程就显得完善许多。</p>
+<h2 id="next基本设置">Next基本设置</h2>
+<p>在准备开始安装各种框架程序阶段，我主要参考了如下两篇教程：</p>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">GitHub
+Pages + Hexo搭建个人博客网站，史上最全教程</a></li>
+<li><a
+target="_blank" rel="noopener" href="https://mini-pi.github.io/2024/02/28/how-to-make-blog-wedsite/">2024年，如何使用
+github pages + Hexo + Next 搭建个人博客</a></li>
+</ul>
+<p>第一篇教程非常详细，几乎是从零开始手把手教你怎么开始搭建博客，但缺点是发布于2021年，距离现在比较久远，个人只将它当作一个大致步骤的参考。</p>
+<p>相比之下第二篇教程同样很细致，而且距离现在很近，唯一的缺点就是没有前者那么详细，我个人搭建的时候就是按照这个教程来的。但是在用这个教程的时候千万要注意，该教程中的
+“Step3：配置 Next 主题” 里的命令
+<code>git clone https://github.com/iissnan/hexo-theme-next themes/next</code>
+是<strong>无效的</strong>，主要原因在于 Next 主题似乎迁移了一次官方
+Github 网址，导致上述网址访问是 404 ，这里建议去<a
+target="_blank" rel="noopener" href="https://github.com/theme-next/hexo-theme-next">现在的官方网址</a>，里面包含了中英的安装指导。</p>
+<p>接下来就从头到尾地分享我个人的建站过程。</p>
+<p>首先是 Github 账号和 Git
+的安装，这一步网上有大量的资料，在此不赘述。</p>
+<p>然后是安装 NodeJS ，这里我参考了<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119084295">NodeJS安装及配置(Windows)</a>，它的
+“一、下载安装包” 部分是没什么问题的，但 “二、修改全局包路径”
+对于个人而言并不管用，而且会报错使得 Hexo 无法安装，且卸载重新安装
+NodeJS
+并不会改变被修改过的环境变量，在执行<code>npm root -g</code>命令时依旧会显示被手动修改后的路径。</p>
+<p>如果你也遇到了和我一样的问题，以下是我的解决过程：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config list <span class="comment">#查看当前npm配置</span></span><br><span class="line">npm config delete prefix <span class="comment">#删除配置文件</span></span><br></pre></td></tr></table></figure>
+<p>一般而言，在删除配置文件后，npm 会使用 NodeJS
+安装时的默认路径，就解决了手动修改路径后改不回来的问题。</p>
+<p>总之，个人建议是不去动安装时的设置，放在 C 盘也不会占用太多空间。</p>
+<p>安装好后，我就顺着<a
+target="_blank" rel="noopener" href="https://blog.csdn.net/yaorongke/article/details/119089190">前文提到的教程</a>完成了
+Github 仓库的创建和 Github Pages 的示例使用。</p>
+<p>接着就是 Next
+主题的安装了。这里我就踩了之前提到的坑，这边建议是去官方网址遵循最新的安装指导，实际上如果你用了旧网址进行安装，应该会有类似如下的报错信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">WARN  ===============================================================</span><br><span class="line">WARN  ========================= ATTENTION! ==========================</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   NexT repository is moving here: https://github.com/theme-next</span><br><span class="line">WARN  ===============================================================</span><br><span class="line">WARN   It<span class="string">&#x27;s rebase to v6.0.0 and future maintenance will resume there</span></span><br><span class="line"><span class="string">WARN  ===============================================================</span></span><br></pre></td></tr></table></figure>
+<p>跟着这个报错信息去最新的网址就可以了。</p>
+<p>我当时的操作是先删除了旧的文件，然后再依据官方指导从新仓库克隆主题：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> your_hexo_site <span class="comment">#进入你的Hexo根目录</span></span><br><span class="line"><span class="built_in">rm</span> -rf themes/next <span class="comment">#删除旧的Next主题文件夹</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/theme-next/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure>
+<h2 id="next站点美化">Next站点美化</h2>
+<p>到这里站点和主题就算是搭建好了，接下来就是进行站点美化，我参考的教程有：</p>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2317861">Hexo的Next主题优化教程</a></li>
+<li><a target="_blank" rel="noopener" href="https://iitii.github.io/2021/05/28/1/">Hexo Next
+主题安装、配置及美化</a></li>
+</ul>
+<p>这两篇教程都非常详细，涵盖了美化的许多方面。因为是第一次建站，所以我并没有一下子引入里面的全部功能，所以只分享一下我配置部分功能的过程。</p>
+<p>在配置之前，首先要分清<strong>站点配置文件</strong>和<strong>主题配置文件</strong>，二者的文件名都一样，但所处目录位置不同，在反复修改这俩文件的时候注意别弄混了：</p>
+<ul>
+<li>站点配置文件：位于你的 Hexo
+根目录下，文件名<code>_config.yml</code>；</li>
+<li>主题配置文件：位于<code>你的Hexo根目录\themes\next</code>下，文件名同样是<code>_config.yml</code>。</li>
+</ul>
+<p>博客网站的基本信息，例如博客标题、作者、简介之类的都在<strong>站点配置文件</strong>下，这一部分的修改在上面两篇教程中都有提到，我的配置如下：</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">title:</span> <span class="string">Old</span> <span class="string">Guard&#x27;s</span> <span class="string">Blogs</span></span><br><span class="line"><span class="attr">subtitle:</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="attr">description:</span> </span><br><span class="line"><span class="attr">keywords:</span></span><br><span class="line"><span class="attr">author:</span> <span class="string">Old</span> <span class="string">Guard</span></span><br><span class="line"><span class="attr">language:</span> <span class="string">zh-CN</span></span><br><span class="line"><span class="attr">timezone:</span> <span class="string">&#x27;&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>其他的配置教程里都讲得非常详细了，我下面只分享一下踩过的坑。</p>
+<p>在<a
+target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2317861">Hexo的Next主题优化教程</a>中，里面的
+“添加站点访问人数计数”
+部分，用的是不蒜子计数。当你按照流程部署完毕，在本地预览时，你也许会发现页脚的浏览人数非常大。这个是正常现象，参考<a
+target="_blank" rel="noopener" href="https://chrischen0405.github.io/2018/09/11/post20180911/">hexo页脚添加访客人数和总访问量</a>中所说，只要将博客部署至云端就可以恢复正常。</p>
+<p>此外，在自己查阅其他关于部署不蒜子的教程时，一定要注意里面不蒜子的地址。因为不蒜子曾经更换过一次域名，所以一些古早教程里可能还使用的是旧域名，具体参考<a
+target="_blank" rel="noopener" href="https://ibruce.info/2015/04/04/busuanzi/">不蒜子官方网址</a>。</p>
+<p>实际上，无论是在站点配置文件或是主题配置文件中，注释条目里都列出了相对应的官方网址，建议在添加或修改某个功能模块时先查阅一下官方网址，避免被过期教程误导。</p>
+<p>除了不蒜子外，在<a target="_blank" rel="noopener" href="https://iitii.github.io/2021/05/28/1/">Hexo
+Next 主题安装、配置及美化</a>中还详细介绍了 LeanCloud
+的计数方法，这里也分享一些我遇见的问题和解决过程。</p>
+<p>首先是在 “文章阅读量、访问量计数”
+部分，按照原教程的配置后，我遇到了文章阅读量在本地预览时不显示，云端部署时显示
+“Counter not initialized! See more at console err msg.”
+的问题。针对这一问题，我查询到了两个可能的解决方法：</p>
+<ol type="1">
+<li><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/w573719227/article/details/100704952">HEXO博客使用LeanCloud报错“Counter
+not initialized! See more at console err
+msg.”</a>：这篇文档里的解决方法亲测对我来说不管用。</li>
+<li><a
+target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/361680271">解决使用LeanCloud国际版时网站文章浏览次数不显示的bug</a>：这篇文档里的方法对我来说是可用的，修复了上述文章阅读量不显示的问题。</li>
+</ol>
+<p>然后是在 “页脚添加总访问量”
+部分，按照教程的指导配置后，我遇到的问题是无论在本地预览还是部署到云端，页脚的总访问量一直显示
+“本站总访问量 Loading…” 。由于本人不熟悉 Java
+的编写，所以以下解决方案来源于 AI ，对我来说是管用的，仅供参考：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span&gt;本站总访问量&lt;/span&gt;</span><br><span class="line">        &lt;span id=<span class="string">&quot;site_total_read_count&quot;</span>&gt;Loading...&lt;/span&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;!-- 添加 LeanCloud SDK --&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;https://cdn.jsdelivr.net/npm/leancloud-storage@4.12.0/dist/av-min.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    </span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="comment">// 添加 LeanCloud 初始化</span></span><br><span class="line">        (function() &#123;</span><br><span class="line">            <span class="comment">// 替换为你的实际应用 ID 和 Key，注意保留引号</span></span><br><span class="line">            <span class="type">const</span> <span class="variable">APP_ID</span> <span class="operator">=</span> <span class="string">&#x27;your LeanCloud ID&#x27;</span>;</span><br><span class="line">            <span class="type">const</span> <span class="variable">APP_KEY</span> <span class="operator">=</span> <span class="string">&#x27;your LeanCloud Key&#x27;</span>;</span><br><span class="line">            </span><br><span class="line">            <span class="comment">// 初始化 LeanCloud - 国内版必须添加 serverURL；如果是国际版，之前添加了URL的话这里也要添加URL</span></span><br><span class="line">            AV.init(&#123;</span><br><span class="line">                appId: APP_ID,</span><br><span class="line">                appKey: APP_KEY,</span><br><span class="line">                serverURL: <span class="string">&#x27;your URL&#x27;</span></span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;)();</span><br><span class="line"></span><br><span class="line">        async function <span class="title function_">getTotalVisitCount</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                <span class="type">const</span> <span class="variable">query</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">AV</span>.Query(<span class="string">&#x27;Counter&#x27;</span>);</span><br><span class="line">                <span class="comment">// 查询所有记录</span></span><br><span class="line">                <span class="type">const</span> <span class="variable">results</span> <span class="operator">=</span> await query.find();</span><br><span class="line">                </span><br><span class="line">                <span class="comment">// 计算总访问量（假设 time 字段存储访问次数）</span></span><br><span class="line">                <span class="type">const</span> <span class="variable">totalCount</span> <span class="operator">=</span> results.reduce((sum, item) =&gt; &#123;</span><br><span class="line">                    <span class="keyword">return</span> sum + (item.get(<span class="string">&#x27;time&#x27;</span>) || <span class="number">0</span>);</span><br><span class="line">                &#125;, <span class="number">0</span>);</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">return</span> totalCount;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">                console.error(<span class="string">&#x27;获取访问量失败:&#x27;</span>, error);</span><br><span class="line">                <span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 等待 AV 初始化完成</span></span><br><span class="line">        <span class="type">const</span> <span class="variable">checkAV</span> <span class="operator">=</span> () =&gt; &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>((resolve) =&gt; &#123;</span><br><span class="line">                <span class="type">const</span> <span class="variable">timer</span> <span class="operator">=</span> setInterval(() =&gt; &#123;</span><br><span class="line">                    <span class="comment">// 更严格的检查</span></span><br><span class="line">                    <span class="keyword">if</span> (typeof AV !== <span class="string">&quot;undefined&quot;</span> &amp;&amp; AV.Object &amp;&amp; AV.Query) &#123;</span><br><span class="line">                        clearInterval(timer);</span><br><span class="line">                        resolve();</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;, <span class="number">250</span>);</span><br><span class="line">            &#125;);</span><br><span class="line">        &#125;;</span><br><span class="line"></span><br><span class="line">        <span class="comment">// 主执行流程</span></span><br><span class="line">        (async <span class="title function_">function</span><span class="params">()</span> &#123;</span><br><span class="line">            <span class="keyword">try</span> &#123;</span><br><span class="line">                await <span class="title function_">checkAV</span><span class="params">()</span>;</span><br><span class="line">                console.log(<span class="string">&quot;AV initialized:&quot;</span>, AV.applicationId);</span><br><span class="line">                </span><br><span class="line">                <span class="type">const</span> <span class="variable">totalCount</span> <span class="operator">=</span> await <span class="title function_">getTotalVisitCount</span><span class="params">()</span>;</span><br><span class="line">                console.log(<span class="string">&quot;Total count:&quot;</span>, totalCount);</span><br><span class="line">                </span><br><span class="line">                <span class="type">const</span> <span class="variable">countElement</span> <span class="operator">=</span> document.getElementById(<span class="string">&quot;site_total_read_count&quot;</span>);</span><br><span class="line">                <span class="keyword">if</span> (totalCount !== <span class="literal">null</span>) &#123;</span><br><span class="line">                    countElement.innerHTML = ` $&#123;totalCount&#125; 次`;</span><br><span class="line">                &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                    countElement.innerHTML = <span class="string">&#x27;数据加载失败&#x27;</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125; <span class="keyword">catch</span> (error) &#123;</span><br><span class="line">                console.error(<span class="string">&#x27;页面加载出错:&#x27;</span>, error);</span><br><span class="line">                document.getElementById(<span class="string">&quot;site_total_read_count&quot;</span>).innerHTML = <span class="string">&#x27;加载失败&#x27;</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;)();</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure>
+<p>以上就是我第一次建站的大体过程和踩过的坑，远远称不上是什么教程，只做分享之用，希望能给后来者们一点微不足道的参考。</p>
+<h1 id="hexobutterfly主题">Hexo+Butterfly主题</h1>
+<p>如前文所述，Butterfly主题的教程大多比较新，而且官方教程写得十分完善。基本上依靠官方教程就能搭建出一个很漂亮的站点了，不过极个别美化还是需要自己找其他教程参考，下面我分享了我参考过的教程以及过程。</p>
+<h2 id="butterfly基本设置">Butterfly基本设置</h2>
+<p>在基本设置上我主要参考了如下两篇教程：</p>
+<ol type="1">
+<li><a target="_blank" rel="noopener" href="https://butterfly.js.org/posts/21cfbf15/">Butterfly
+文档(一)
+快速开始</a>：这是Butterfly官方教程的第一篇，在页面的右下角你可以找到系列文章，只要能细细读完前三篇，基本上就能搭建起一个漂亮的站点了。</li>
+<li><a
+target="_blank" rel="noopener" href="https://blog.clemon.icu/posts/47946/">Hexo的Butterfly主题配置美化与部署</a>：相比事无巨细的官方文档，这篇教程要更加便捷清晰，如果觉得官方文档有点无从下手的话可以参考这篇。</li>
+</ol>
+<p>这里个人踩的一个小坑就是如果要用Github备份博客源代码的话，在按照官方教程克隆博客主题仓库的时候，要注意添加子模块，类似：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git submodule add https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</span><br></pre></td></tr></table></figure>
+<p>如果在安装阶段没有添加子模块的话，在你试图执行 <code>git add .</code>
+的时候，就会有如下类似的报错信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">warning: adding embedded git repository: themes/butterfly</span><br><span class="line">hint: You<span class="string">&#x27;ve added another git repository inside your current repository.</span></span><br><span class="line"><span class="string">hint: Clones of the outer repository will not contain the contents of</span></span><br><span class="line"><span class="string">hint: the embedded repository and will not know how to obtain it.</span></span><br><span class="line"><span class="string">hint: If you meant to add a submodule, use:</span></span><br><span class="line"><span class="string">hint:</span></span><br><span class="line"><span class="string">hint:   git submodule add &lt;url&gt; themes/butterfly</span></span><br><span class="line"><span class="string">hint:</span></span><br><span class="line"><span class="string">hint: If you added this path by mistake, you can remove it from the</span></span><br><span class="line"><span class="string">hint: index with:</span></span><br><span class="line"><span class="string">hint:</span></span><br><span class="line"><span class="string">hint:   git rm --cached themes/butterfly</span></span><br><span class="line"><span class="string">hint:</span></span><br><span class="line"><span class="string">hint: See &quot;git help submodule&quot; for more information.</span></span><br><span class="line"><span class="string">hint: Disable this message with &quot;git config set advice.addEmbeddedRepo false&quot;</span></span><br></pre></td></tr></table></figure>
+<p>如果遇到了这样的情况，就需要先把提交的文件从Git暂存区删除：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">rm</span> --cached -f themes/butterfly</span><br></pre></td></tr></table></figure>
+<p>然后备份所有在 <code>themes/butterfly</code>
+下已经修改过的文件，再删除 <code>themes/butterfly</code>
+文件夹，然后重新克隆主题仓库
+<code>git submodule add https://github.com/jerryc127/hexo-theme-butterfly.git themes/butterfly</code>
+。</p>
+<p>以上是本人的实践过程，并不能保证适用于所有情况，如果对Git不熟悉的话建议直接问AI或参考其他专业教程。</p>
+<h2 id="butterfly美化">Butterfly美化</h2>
+<p>绝大部分Butterfly的美化设置都可以在官方文档中的第三篇<a
+target="_blank" rel="noopener" href="https://butterfly.js.org/posts/4aa8abbe/">Butterfly 文档(三)
+主题配置</a> 中找到，这里我仅仅记录两个个我用到的其他美化教程：</p>
+<ul>
+<li><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41386222/article/details/140210109">Butterfly主题一图流背景及文章顶部图修改</a>：这个教程打造了类似我个人主页的效果，即将页面头图和站点背景合二为一，实现更加整体通透的效果。</li>
+<li><a
+target="_blank" rel="noopener" href="https://blog.csdn.net/2201_76122930/article/details/140663055">Hexo+Butterfly主题设置背景透明度</a>：这个教程实现的是博客页面的透明度调整，只不过个人在实践过程中发现其中调节文章页背景、所有页面背景和侧边卡片透明度的设置好像有点问题，具体表现是只要更改了侧边卡片的透明度，所有页面的透明度都会被更改，单独设置文章页背景透明度好像也不起作用。暂时没有找到解决方案。</li>
+</ul>
+<p>此外，关于文章加密部分我参考了<a
+target="_blank" rel="noopener" href="https://insectmk.cn/posts/ca85c64c/">为Hexo文章设置加密</a>这篇教程，其中遇到的一个小问题是在手机端无法输入密码，具体表现在只要按手机键盘上的回车，就会自动跳到评论部分的第一行。我的解决办法是对于加密的文章，将
+<code>comment</code> 选项设置为 <code>false</code>
+，这样就能正常输入密码查看了。</p>
+<p>总之，以上就是我两次建站的经历，不能算教程，只是经验分享，也不保证适用于每个人。祝愿大家都有愉快的建站旅程！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://old-guardian.github.io">Old Guard</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://old-guardian.github.io/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/">https://old-guardian.github.io/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://old-guardian.github.io" target="_blank">Old Guard's Blogs</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Hexo/">Hexo</a><a class="post-meta__tags" href="/tags/Next/">Next</a></div><div class="post-share"><div class="social-share" data-image="/my_images/old_guard.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width no-desc" href="/2025/09/12/ECON2252-Lecture-1/" title="ECON2252 Lecture 1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">ECON2252 Lecture 1</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/my_images/old_guard.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Old Guard</div><div class="author-info-description">跨越文理，既是AI人，也是历史人。</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">2</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">4</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Old-Guardian"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="/rick6121@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">部分课程笔记由于Slide Policy暂时不公开，我正在努力删改行文使其成为完整的博文。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#hexonext%E4%B8%BB%E9%A2%98"><span class="toc-text">Hexo+Next主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#next%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE"><span class="toc-text">Next基本设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#next%E7%AB%99%E7%82%B9%E7%BE%8E%E5%8C%96"><span class="toc-text">Next站点美化</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hexobutterfly%E4%B8%BB%E9%A2%98"><span class="toc-text">Hexo+Butterfly主题</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#butterfly%E5%9F%BA%E6%9C%AC%E8%AE%BE%E7%BD%AE"><span class="toc-text">Butterfly基本设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#butterfly%E7%BE%8E%E5%8C%96"><span class="toc-text">Butterfly美化</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/12/ECON2252-Lecture-1/" title="ECON2252 Lecture 1">ECON2252 Lecture 1</a><time datetime="2025-09-12T10:44:33.000Z" title="发表于 2025-09-12 18:44:33">2025-09-12</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/11/%E6%88%91%E7%9A%84%E5%BB%BA%E7%AB%99%E5%8E%86%E7%A8%8B/" title="我的建站历程">我的建站历程</a><time datetime="2025-09-11T12:59:28.000Z" title="发表于 2025-09-11 20:59:28">2025-09-11</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Old Guard</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img no-lazy src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img no-lazy src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img no-lazy src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img no-lazy src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img no-lazy src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'zzo156Cm1zpw5nKvboBcJNtr-MdYXbMMI',
+      appKey: 'aRLuqo6CJWxtMe30IVosSSq4',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
