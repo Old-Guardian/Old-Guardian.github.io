@@ -1,0 +1,563 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>ECON2252 Lecture 4 (1) | Old Guard's Blogs</title><meta name="author" content="Old Guard"><meta name="copyright" content="Old Guard"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="到目前为止，我们学习过的模型都告诉我们，贸易是有益的。但是，在现实中，为什么这么多人反对贸易？ 在上节我们学习的李嘉图模型中，有一个关键假设：劳动力是自由流动的。也就是说，在李嘉图模型中，只要国家开放贸易，劳动者就会立刻被重新分配到具有比较优势的产业，因此所有人都可以从贸易中获益。 然而，这个假设是很难成立的。在现实中，我们常常看到劳动者被困在他们原本的产业中，而这些产业往往并不是具有比较优势的产">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ECON2252 Lecture 4 (1)">
+<meta property="og:url" content="https://old-guardian.github.io/2025/10/19/ECON2252-Lecture-4-1/index.html">
+<meta property="og:site_name" content="Old Guard&#39;s Blogs">
+<meta property="og:description" content="到目前为止，我们学习过的模型都告诉我们，贸易是有益的。但是，在现实中，为什么这么多人反对贸易？ 在上节我们学习的李嘉图模型中，有一个关键假设：劳动力是自由流动的。也就是说，在李嘉图模型中，只要国家开放贸易，劳动者就会立刻被重新分配到具有比较优势的产业，因此所有人都可以从贸易中获益。 然而，这个假设是很难成立的。在现实中，我们常常看到劳动者被困在他们原本的产业中，而这些产业往往并不是具有比较优势的产">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://old-guardian.github.io/my_images/old_guard.jpg">
+<meta property="article:published_time" content="2025-10-19T11:37:49.000Z">
+<meta property="article:modified_time" content="2025-10-19T11:37:49.000Z">
+<meta property="article:author" content="Old Guard">
+<meta property="article:tag" content="经济">
+<meta property="article:tag" content="国际贸易">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://old-guardian.github.io/my_images/old_guard.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "ECON2252 Lecture 4 (1)",
+  "url": "https://old-guardian.github.io/2025/10/19/ECON2252-Lecture-4-1/",
+  "image": "https://old-guardian.github.io/my_images/old_guard.jpg",
+  "datePublished": "2025-10-19T11:37:49.000Z",
+  "dateModified": "2025-10-19T11:37:49.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Old Guard",
+      "url": "https://old-guardian.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://old-guardian.github.io/2025/10/19/ECON2252-Lecture-4-1/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'ECON2252 Lecture 4 (1)',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/footer.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/my_images/my_default_top_image.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/my_images/old_guard.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Old Guard's Blogs</span></a><a class="nav-page-title" href="/"><span class="site-name">ECON2252 Lecture 4 (1)</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">ECON2252 Lecture 4 (1)</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-19T11:37:49.000Z" title="发表于 2025-10-19 19:37:49">2025-10-19</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-19T11:37:49.000Z" title="更新于 2025-10-19 19:37:49">2025-10-19</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">4.7k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>15分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2025/10/19/ECON2252-Lecture-4-1/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2025/10/19/ECON2252-Lecture-4-1/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img gist" style="background-image: url(/null)"></div><article class="container post-content" id="article-container"><p>到目前为止，我们学习过的模型都告诉我们，贸易是有益的。但是，在现实中，为什么这么多人反对贸易？</p>
+<p>在上节我们学习的李嘉图模型中，有一个关键假设：<strong>劳动力是自由流动的</strong>。也就是说，在李嘉图模型中，只要国家开放贸易，劳动者就会立刻被重新分配到具有比较优势的产业，因此所有人都可以从贸易中获益。</p>
+<p>然而，<strong>这个假设是很难成立的</strong>。在现实中，我们常常看到劳动者被困在他们原本的产业中，而这些产业往往并不是具有比较优势的产业，所以这些劳动者是无法享受贸易带来的全部好处的。</p>
+<p>因此，接下来我们将讨论国际贸易的分配结果，我们主要聚焦下面两个问题：</p>
+<ul>
+<li>我们该如何为此建模？</li>
+<li>这对贸易有何政策含义？</li>
+</ul>
+<p>本章核心：</p>
+<ul>
+<li>总体而言，贸易是有益的。</li>
+<li>但这些收益在不同群体之间的分配可能不均衡。</li>
+<li>特别是，一些群体可能会受益，而一些群体可能会受损。</li>
+<li>我们不应因为一些群体受损而停止全球化。</li>
+</ul>
+<p>为了研究上述问题，我们将继续延伸李嘉图模型，加入一个新的生产要素——<strong>资本</strong>。我们假设：</p>
+<ul>
+<li>资本是特定于某个行业的。</li>
+<li>要素的特殊性通常是短期的。</li>
+<li>模型将会允许我们研究对于不同的要素，贸易是如何影响收入的。</li>
+</ul>
+<p>事实上，我们可以根据研究旨趣灵活调整这些因素。例如我们想研究不同技能群体的分配效应，我们就可以将这两个因素建模为高技能劳动力和低技能劳动力，而低技能劳动力可能特定于特定行业。</p>
+<p>学习目标：</p>
+<ul>
+<li>理解要素流动性为何对福利结果很重要。</li>
+<li>学会解决两种生产要素下的公司问题。</li>
+<li>理解当相对价格变动时，实际要素收入会发生什么变化。</li>
+<li>理解为什么贸易对不同的群体会产生福利分配影响。<ul>
+<li>用实际工资衡量福利。</li>
+<li>哪些人受益？哪些人受损？</li>
+</ul>
+</li>
+</ul>
+<h1 id="Closed-Economy-Model"><a href="#Closed-Economy-Model" class="headerlink" title="Closed Economy Model"></a>Closed Economy Model</h1><p>我们依然假设一个国家 Home ：</p>
+<ul>
+<li>Home 中的家庭消费 $C_1^H,C_2^H$ 量的两种商品，产生效用 $U(C_1,C_2)$ .<ul>
+<li>$U$ 具有效用函数的一切标准性质。</li>
+</ul>
+</li>
+<li>两种产业（或者说商品）1 和 2 .<ul>
+<li>这两种商品生产时都使用劳动力和资本。</li>
+<li>市场结构为完全竞争市场。</li>
+</ul>
+</li>
+<li>要素禀赋为<ul>
+<li>$\bar{L}$ 单位的劳动力。</li>
+<li>$\bar{K_1}$ 单位的产业 1 资本。</li>
+<li>$\bar{K_2}$ 单位的产业 2 资本。</li>
+</ul>
+</li>
+<li>要素流动性为<ul>
+<li>劳动力可以在两种产业间自由流动。</li>
+<li>资本则是产业特定的。</li>
+</ul>
+</li>
+</ul>
+<h2 id="Demand"><a href="#Demand" class="headerlink" title="Demand"></a>Demand</h2><p>我们首先来看需求端，也就是家庭面临什么问题。</p>
+<h3 id="Budget-Set"><a href="#Budget-Set" class="headerlink" title="Budget Set"></a>Budget Set</h3><p>现在，由于我们加入了资本这一新的生产要素，所以<strong>家庭收入</strong> $I$ 就取决于这家是工人还是资本家了。我们有如下式子</p>
+<script type="math/tex; mode=display">
+I= \left \{ \begin{aligned}
+w\bar{L}\enspace &,\,\text{for workers} \\
+r_1\bar{K_1}\enspace &,\,\text{for sector 1 capital owners} \\
+r_2\bar{K_2}\enspace &,\,\text{for sector 2 capital owners}
+\end{aligned} \right.</script><p>其中</p>
+<ul>
+<li>$w$：工人收到的工资。</li>
+<li>$r_1$：产业 1 的资本租金率（可以简单地理解成使用资本的成本）。</li>
+<li>$r_2$：产业 2 的资本租金率。</li>
+</ul>
+<p>由于劳动力可以自由流动，就像我们在上节分析的那样，两个行业里的工资会<strong>趋同</strong>，所以这里只有一个 $w$ 。</p>
+<p>而对于资本，由于其是产业特定的，所以会有<strong>不同</strong>的资本租金率 $r_1,r_2$ 。</p>
+<p>和之前一样，我们可以根据家庭的预算限制画出<strong>预算集</strong></p>
+<p><img src="image1.png" alt=""></p>
+<h3 id="Utility-Maximization"><a href="#Utility-Maximization" class="headerlink" title="Utility Maximization"></a>Utility Maximization</h3><p>和此前一样，家庭被动地接受市场价格。即对于家庭而言，价格和收入都是<strong>外生的</strong>。</p>
+<p>家庭通过决定 ${C_1^H,C_2^H}$ 来<strong>最大化效用</strong>，有</p>
+<script type="math/tex; mode=display">\begin{align} 
+&\max_{C_1^H,C_2^H}U(C_1^H,C_2^H) \\
+&s.t.\enspace p_1^HC_1^H+p_2^HC_2^H \le I
+\end{align}</script><p>和之前我们学习的模型相同，有边际替代率以及效用曲线和预算线</p>
+<p><img src="image2.png" alt=""></p>
+<p>和我们之前讨论的一样，图中的三条效用曲线代表不同的消费组合 ${C_1^H,C_2^H}$ ，太高的曲线表示该消费组合超出了家庭预算，太低代表家庭预算没用完，效用没最大化，只有相切的时候是最大化效用的。</p>
+<h3 id="Relative-Demand"><a href="#Relative-Demand" class="headerlink" title="Relative Demand"></a>Relative Demand</h3><p>和之前相同，不同的相对价格 $p_r^H$ 会导致对 $C_1^H,C_2^H$ 不同的选择，例如当商品 1 相对商品 2 变得更贵时，商品 1 相对商品 2 的消费量就会下降。</p>
+<p>相对需求曲线如下图</p>
+<p><img src="image3.png" alt=""></p>
+<h2 id="Production"><a href="#Production" class="headerlink" title="Production"></a>Production</h2><p>而在供给端，对于国内企业而言，有如下<strong>生产函数</strong></p>
+<script type="math/tex; mode=display">
+X_i=F(K_i,L_i)\enspace where \enspace i\in \{1,2\}</script><p>其中</p>
+<ul>
+<li>$X_i$：商品 i 的生产量。</li>
+<li>$F$：生产函数。</li>
+</ul>
+<p>我们可以定义<strong>边际资本产出</strong>（MPK）和<strong>边际劳动产出</strong>（MPL）：</p>
+<script type="math/tex; mode=display">\begin{align} 
+a_{K_i} &\equiv \frac{\partial F(K_i,L_i)}{\partial K_i} \equiv F_K(K_i,L_i) \\
+a_{L_i} &\equiv \frac{\partial F(K_i,L_i)}{\partial L_i} \equiv F_L(K_i,L_i)
+\end{align}</script><p>与李嘉图模型不同，在这里，边际产出并不是一个定值。相反，<strong>当另一个因素保持不变时，每个因素的收益都会递减</strong>。</p>
+<blockquote>
+<p>为什么和李嘉图模型不同？</p>
+<p>特定要素模型中边际产出递减 vs 李嘉图模型中边际产出恒定 的关键原因在于<strong>生产函数的形式不同（线性 vs 凹性）</strong>。</p>
+<p>回忆在李嘉图模型中，我们有</p>
+<script type="math/tex; mode=display">
+X_2^H=-\frac{a_2^H}{a_1^H}X_1^H+a_2^HL^H</script><p>在这里，生产函数是线性的，<strong>没有边际收益递减</strong>。这是因为在李嘉图模型中，劳动是唯一要素，且生产技术不变，也就不存在其他要素固定导致的边际递减了。</p>
+<p>而在特定要素模型中，生产函数往往为凹函数（例如柯布-道格拉斯函数），<strong>当其他要素固定时，增加一要素的边际产出递减</strong>。</p>
+<p>总的来说，李嘉图模型简化了生产过程（仅引入劳动一个生产要素），因此无法解释要素的价格变动（例如工资、租金等）。</p>
+<p>而特定要素模型引入了多个要素（资本和劳动），因此能分析贸易对要素收入的影响。</p>
+</blockquote>
+<h3 id="Marginal-Products"><a href="#Marginal-Products" class="headerlink" title="Marginal Products"></a>Marginal Products</h3><p>所谓要素的边际产出递减体现如下：</p>
+<p>例如，保持资本投入不变时，当劳动力投入增加，产出的增加速度会下降：</p>
+<p><img src="image4.png" alt=""></p>
+<p>这条曲线在每一点的斜率就是在某个特定的劳动力投入时的<strong>边际劳动产出</strong> $a_{L_i}$ ：</p>
+<p><img src="image6.png" alt=""></p>
+<p>换句话说，保持资本投入不变时，当劳动力投入增加，边际劳动产出就会减少，所以我们可以画出<strong>劳动力投入 $L_i$ 与其边际劳动产出</strong> $a_{L_i}$ 的图像：</p>
+<p><img src="image7.png" alt=""></p>
+<p>对于<strong>边际资本产出</strong> $a_{K_i}$ 也是同理。</p>
+<h3 id="Production-Possibilities-Frontier"><a href="#Production-Possibilities-Frontier" class="headerlink" title="Production Possibilities Frontier"></a>Production Possibilities Frontier</h3><p>在我们研究完边际产出后，我们就回到供给端最核心的问题：在生产技术不变的情况下，<strong>每种商品有多少可以被生产出来</strong>？</p>
+<p>换句话说，我们要得到包含所有可能生产束的<strong>生产可能边界</strong>，我们可以得到 Home 的生产可能边界如下：</p>
+<p><img src="image8.png" alt=""></p>
+<p>可以发现，与李嘉图模型不同，这里生产可能边界是一条曲线。这是因为生产可能边界的斜率是 MPL 的比值，而李嘉图模型中 MPL 是一个定值，所以是一条直线。在本模型中，就如我们上节讨论的那样，</p>
+<blockquote>
+<p>边际产出并不是一个定值。相反，<strong>当另一个因素保持不变时，每个因素的收益都会递减</strong>。</p>
+</blockquote>
+<p>所以，此时的 PPF 自然就是一条斜率不断变化的曲线了。</p>
+<h3 id="Profit-Maximization"><a href="#Profit-Maximization" class="headerlink" title="Profit Maximization"></a>Profit Maximization</h3><p>现在我们知道了所有可能的生产组合，那么企业将如何选择组合以使其<strong>利润最大化</strong>呢？</p>
+<p>首先我们要重复我们之前的假设——市场是完全竞争的。也就是说企业被动地接受市场价格而不是操纵它，根据市场价格选择每种生产要素的投入来最大化利润。</p>
+<p>对于一家企业，最大化商品 i 的<strong>利润问题</strong>有如下正式形式</p>
+<script type="math/tex; mode=display">
+\max_{K_{i},L_{i}}\{p_iF(K_i,L_i)-r_iK_i-wL_i\}</script><p>其中</p>
+<ul>
+<li>$p_iF_i$：市场价格乘以生产函数，就是企业生产出来的产品卖的钱。</li>
+<li>$r_iK_i$：资本租金率乘以资本，就是企业投入生产要素——资本的成本。</li>
+<li>$wL_i$：工人工资乘以劳动力，就是企业投入生产要素——劳动力的成本。</li>
+</ul>
+<p>我们不难发现，和李嘉图模型相比，此时企业有了一个新的选择，就是<strong>决定投入劳动力和资本之间的比例</strong>，也就是两者的此消彼长。</p>
+<hr>
+<p>这里需要留意的是虽然对于产业 i 而言，其总资本供给 $\bar{K_i}$ 是固定的，但企业始终可以决定投入多少 $K_i$ 。</p>
+<p>但从整个市场的角度来看，当市场处于均衡时，要素价格一定会使得 $K_i=\bar{K_i}$ 。</p>
+<p>这是因为产业 i 的总资本供给 $\bar{K_i}$ 是固定的，这些资本由许多资本所有者拥有，我们可以看两种情况：</p>
+<ol>
+<li>如果在一个给定的价格 $r_i$ 下，**所有企业对资本的总需求 $K_i$ 小于总供给 $\bar{K_i}$，会发生什么？</li>
+</ol>
+<ul>
+<li>将出现资本的超额供给。一些资本所有者会发现他们的资本租不出去。</li>
+</ul>
+<ul>
+<li>为了将资本租出去，这些资本所有者会愿意接受一个更低的租金率 $r_i$。</li>
+<li>因此，<strong>资本租金率 $r_i$ 会下降</strong></li>
+</ul>
+<ol>
+<li>反之，如果在一个给定的价格 $r_i$ 下，<strong>所有企业对资本的总需求 $K_i$ 大于总供给 $\bar{K_i}$</strong>，会发生什么？</li>
+</ol>
+<ul>
+<li>将出现资本的超额需求。一些企业会租不到它们想要的资本量。</li>
+<li>为了确保能租到资本，企业会愿意支付更高的租金率 $r_i$。</li>
+<li>因此，<strong>资本租金率 $r_i$ 会上升</strong>。</li>
+</ul>
+<p>所以，<strong>市场均衡</strong>就发生在这样一个状态：资本租金率 $r_i$ 调整到某一个水平，使得<strong>所有企业“自由选择”的资本总投入量，恰好等于整个经济的资本总供给量</strong>。</p>
+<hr>
+<p>回到利润最大化问题，在式子</p>
+<script type="math/tex; mode=display">
+\max_{K_{i},L_{i}}\{p_iF(K_i,L_i)-r_iK_i-wL_i\}</script><p>中，我们分别对 $L_i,K_i$ 求偏导并令其等于 0 ，就能得到劳动力和资本的一阶条件：</p>
+<script type="math/tex; mode=display">\begin{align} 
+w&=p_i F_L(K_i,L_i)=p_i a_{L_i} \\ 
+r_i&=p_i F_K(K_i,L_i)=p_i a_{K_i}
+\end{align}</script><p>其中</p>
+<ul>
+<li>$F_L(K_i,L_i)=\frac{\partial F}{\partial L_i}$ </li>
+<li>$F_K(K_i,L_i)=\frac{\partial F}{\partial K_i}$ </li>
+</ul>
+<blockquote>
+<p>这两个条件的含义</p>
+<p>对于第一个条件 $w=p_i F_L(K_i,L_i)$ ：</p>
+<p><strong>左边</strong>：$w$ 是企业使用一单位劳动力的<strong>成本</strong>（工资率）。<br><strong>右边</strong>：$p_i F_L(K_i,L_i)$ 是企业使用一单位劳动力的<strong>收益</strong>（边际收益产品）。其中 $p_i$ 是产品的价格，$F_L(K_i,L_i)$ 是增加一单位劳动力能多生产多少产品（边际产量，MP）。<br>这个条件的含义是企业会雇佣劳动直到<strong>劳动的边际收益产品等于工资率</strong>。如果边际收益产品大于工资，企业会继续雇佣；如果小于，企业会减少雇佣。</p>
+<p>对于第二个条件 $r_i=p_i F_K(K_i,L_i)$ ：</p>
+<p><strong>左边</strong>：$r_i$ 是企业使用一单位资本的<strong>成本</strong>（资本租金率）。<br><strong>右边</strong>：$p_i F_K(K_i,L_i)$ 是企业使用一单位资本的<strong>收益</strong>（边际收益产品）。其中 $p_i$ 是产品的价格，$F_K(K_i,L_i)$ 是增加一单位资本能多生产多少产品（边际产量，MP）。<br>这个条件的含义是企业会租用资本直到<strong>资本的边际收益产品等于资本租金率</strong>。</p>
+</blockquote>
+<p>这个式子也说明了，工资 $w$ 和资本租金率 $r_i$ 是由这些要素的<strong>边际收益产品</strong>（MRPK, MRPL）决定的，其中</p>
+<script type="math/tex; mode=display">\begin{align} 
+MRPK&=MRK\times MPK =r_i=p_ia_{K_i}\\
+MRPL&=MRL\times MPL =w=p_ia_{L_i}\\
+\end{align}</script><p>上面的式子还说明了<strong>实际收入等于边际产品</strong>：</p>
+<script type="math/tex; mode=display">\begin{align} 
+\frac{w}{p_i}&= F_L(K_i,L_i)= a_{L_i} \\ 
+\frac{r_i}{p_i}&= F_K(K_i,L_i)= a_{K_i}
+\end{align}</script><p>其中</p>
+<ul>
+<li>$\frac{w}{p_i},\frac{r_i}{p_i}$：对于工人而言，实际收入就是名义工资除以市场价格；对于资本家而言，实际收入就是名义资本租金率除以市场价格。</li>
+<li>$F_L,F_K$：对生产函数分别求生产要素：劳动力和资本的偏导，得到的就是边际产品（MPL, MPK）。</li>
+<li>$a<em>{L</em>{i}},a<em>{K</em>{i}}$：表示边际产品（产出）。</li>
+</ul>
+<p>我们知道，产业 1 和 2 的工资 $w$ 是相同的（见前文），所以 MRPLs 也就是相同的了：</p>
+<script type="math/tex; mode=display">
+p_1a_{L_1}=p_2a_{L_2}</script><p>所以，<strong>相对价格就等于相对 MPL 的倒数</strong>。</p>
+<script type="math/tex; mode=display">
+\frac{p_1}{p_2}=\frac{a_{L_2}}{a_{L_1}}</script><p>这和李嘉图模型是一致的，除了在这里边际产品 $a<em>{L_2},a</em>{L_1}$ 不是定值外。</p>
+<h2 id="Market-Clearing"><a href="#Market-Clearing" class="headerlink" title="Market Clearing"></a>Market Clearing</h2><p>现在，我们有了需求端（家庭）的消费束，供给端（企业）的生产束，以及它们各自最大化效用 / 利润的策略。接下来我们该讨论两者在市场中的真实互动——市场出清了。</p>
+<p>我们有如下出清条件：</p>
+<ol>
+<li>对于<strong>资本</strong>，市场出清要求（记住资本是产业特定的，不像劳动力那样可以自由流动，所以要分别相等）：</li>
+</ol>
+<script type="math/tex; mode=display">\begin{align} 
+K_1 &= \bar{K_1} \\
+K_2&= \bar{K_2}
+\end{align}</script><ol>
+<li>对于<strong>劳动力</strong>，市场出清要求（劳动力可以在产业间自由流动，所以总和相加相等即可）:</li>
+</ol>
+<script type="math/tex; mode=display">
+L_1 + L_2 = \bar{L}</script><ol>
+<li>对于<strong>商品</strong>，市场出清要求：</li>
+</ol>
+<script type="math/tex; mode=display">\begin{align} 
+C_1 &= X_1 \\
+C_2&= X_2
+\end{align}</script><p>以上市场出清条件将决定要素和商品的价格。</p>
+<h3 id="Determination-of-Wages"><a href="#Determination-of-Wages" class="headerlink" title="Determination of Wages"></a>Determination of Wages</h3><p>我们首先来看工资是如何决定的。</p>
+<p>我们的模型将要建立类似这样的一个链条：</p>
+<p><strong>外生冲击（如国际贸易、技术变革） → 商品价格变化 → 要素价格和收入分配变化</strong></p>
+<p>为了方便我们的研究，我们<strong>首先将商品价格 $p_1,p_2$ 设置为外生的</strong>，这样我们就能隔离并专注于研究这个链条的<strong>后半部分</strong>，即“商品价格变化如何导致要素价格变化”。</p>
+<p>我们看到，当商品价格固定时，以产业 1 为例，劳动的边际收益产品（MRPL），即名义工资是随着劳动投入 $L_1$ 的增加而降低的：</p>
+<p><img src="image9.png" alt=""></p>
+<p>对产业 2 也是同理，当 $L_2$ 增加时，劳动边际收益产品也是降低的：</p>
+<p><img src="image10.png" alt=""></p>
+<p><strong>平衡的劳动分配必须使得两个产业的 MRPLs 是相等的</strong>。我们可以设想，如果产业 1 的 MRPL 大于产业 2，那么工人就会往产业 1 移动，导致产业 1 的 MRPL 降低，同时产业 2 的 MRPL 升高，最终两者相同。</p>
+<p><img src="image11.png" alt=""></p>
+<p>这就决定了工资，因为我们前面证明了 $w=MRPL$ .</p>
+<h3 id="Determination-of-Rental-Rates"><a href="#Determination-of-Rental-Rates" class="headerlink" title="Determination of Rental Rates"></a>Determination of Rental Rates</h3><p>实际上，平衡的劳动分配还决定了资本租金率。</p>
+<p>我们看到，当 $L_1$ 增加时，产业 1 的资本边际产品，即资本租金率是增加的。</p>
+<p><img src="image12.png" alt=""></p>
+<p>从直观上来说，当劳动力 $L_1$ 增加时，<strong>固定的资本存量被更密集、更有效地使用</strong>，因此每单位资本的生产力（边际产量）上升。而从数学上来说，$MPK=\partial F / \partial K$ ，<strong>这个偏导数通常是依赖于 $L$ 的数量的</strong>。</p>
+<p>对产业 2 也是同理。</p>
+<p><img src="image13.png" alt=""></p>
+<p>所以，<strong>平衡的劳动分配也决定了资本租金率</strong>。我们可以设想，如果产业 1 的资本租金率高于产业 2 ，企业就会倾向于往产业 2 投入资金，产业 1 中的资本持有者就会发现他们的资本租不出去，为了将资本租出去，这些资本所有者会愿意接受一个更低的租金率 $r_1$ ，因此，资本租金率 $r_1$ 会下降（道理和之前讲的总资本供给均衡相同）。</p>
+<p>不过因为资本是产业特定的，所以两个产业的平衡资本租金率可能不同，也就是两条曲线不一定对称：</p>
+<p><img src="image14.png" alt=""></p>
+<h3 id="Relative-Supply"><a href="#Relative-Supply" class="headerlink" title="Relative Supply"></a>Relative Supply</h3><p>我们已经讨论了<strong>均衡状态下的市场中的要素价格</strong>。现在，我们假设 $p_1$ 上升了，那么下图（平衡点）会发生什么样的变化呢？</p>
+<p><img src="image15.png" alt=""></p>
+<p>我们不难看出，由于 $p_1$ 上涨，红色的曲线必然会向上移，于是有</p>
+<p><img src="image16.png" alt=""></p>
+<p>也就是说，产业 1 的 MRPL 上升了，即<strong>更多的劳动会被分配给产业 1</strong>：</p>
+<p><img src="image17.png" alt=""></p>
+<hr>
+<p>现在，我们再假设 $p_2$ 下降，看看下图会发生什么变化。</p>
+<p><img src="image18.png" alt=""></p>
+<p>我们不难看出，由于 $p_2$ 下降，蓝色的曲线必然会向下移，于是有</p>
+<p><img src="image19.png" alt=""></p>
+<p>也就是说，产业 2 的 MRPL 下降了，即<strong>更多的劳动会被分配给产业 1</strong>：</p>
+<p><img src="image20.png" alt=""></p>
+<hr>
+<p>无论是 $p_1$ 上升还是 $p_2$ 下降，<strong>相对价格</strong> $\frac{p_1}{p_2}$ 是上升的，同时<strong>相对供给</strong> $\frac{X_1}{X_2}$ 也会上升，因为就如前面所述，更多的劳动被分配给了产业 1 ，所以产业 1 的产量 $X_1=F(K_1,L_1)$ 自然就会增加。下图是相对供给曲线</p>
+<p><img src="image21.png" alt=""></p>
+<h3 id="Determination-of-relative-goods-price"><a href="#Determination-of-relative-goods-price" class="headerlink" title="Determination of relative goods price"></a>Determination of relative goods price</h3><p>我们已经讨论了<strong>相对价格的变动会如何影响相对供给</strong>。那么，相对价格又是如何决定的呢？</p>
+<p>事实上，相对价格是由<strong>商品市场出清要求：相对需求 = 相对供给</strong>决定的，见下图：</p>
+<p><img src="image22.png" alt=""></p>
+<p>一旦相对价格定下来了，那么下列变量也都定下来了：</p>
+<ul>
+<li><strong>相对劳动边际产出</strong>（MPL）：$\frac{a<em>{L</em>{1}}}{a<em>{L</em>{2}}}$；<ul>
+<li>这是由 $w=p<em>1a</em>{L<em>{1}}=p_2a</em>{L<em>{2}}\implies\frac{a</em>{L<em>{1}}}{a</em>{L_{2}}}=\frac{p_2}{p_1}$ 得来的；</li>
+</ul>
+</li>
+<li><strong>均衡产出</strong>：$X_1,X_2$；<ul>
+<li>在 $\frac{p<em>2}{p_1}$ 已知的情况下，我们可以从 $\frac{a</em>{L<em>{1}}}{a</em>{L<em>{2}}}=\frac{p_2}{p_1}$ 以及 $L_1+L_2=L$ 中求出唯一的 $L_1,L_2$ （$a</em>{L<em>{1}},a</em>{L_{2}}$ 都是关于 $L_1,L_2$ 的函数）；</li>
+<li>然后将其代入生产函数 $X_i=F(K_i,L_i)\enspace where \enspace i\in {1,2}$ 即可（$K_1,K_2$ 往往是已知的固定要素，而 $L_1,L_2$ 由相对价格决定）；</li>
+</ul>
+</li>
+<li><strong>均衡消费</strong>：$C_1,C_2$；<ul>
+<li>假设经济封闭（无贸易），则 $X_1=C_1,X_2=C_2$ ；</li>
+<li>若开放贸易，则 $p_1X_1+p_2X_2=p_1C_1+p_2C_2$ ；</li>
+</ul>
+</li>
+</ul>
+<p>上述结论也可以用下图展示：</p>
+<p><img src="image23.png" alt=""></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://old-guardian.github.io">Old Guard</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://old-guardian.github.io/2025/10/19/ECON2252-Lecture-4-1/">https://old-guardian.github.io/2025/10/19/ECON2252-Lecture-4-1/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://old-guardian.github.io" target="_blank">Old Guard's Blogs</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BB%8F%E6%B5%8E/">经济</a><a class="post-meta__tags" href="/tags/%E5%9B%BD%E9%99%85%E8%B4%B8%E6%98%93/">国际贸易</a></div><div class="post-share"><div class="social-share" data-image="/my_images/old_guard.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2025/10/09/%E4%B8%A4%E4%B8%AA%E4%B8%96%E7%BA%AA%E7%9A%84%E8%83%8C%E6%99%AF%EF%BC%88%E4%BA%8C%EF%BC%89/" title="两个世纪的背景（二）"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">两个世纪的背景（二）</div></div><div class="info-2"><div class="info-item-1">18世纪的欧洲军队当时的后勤状况在军队停止运动时的补给： 在任何情况下，建立仓库都只是为了保障军队最初的进攻。然后，军队越过边界，进入敌国领土，选定一个易于防守，靠近良好道路或河川的方便位置，扎下营盘，掘壕设防。 军队日用的粮袜是不缺乏的，但要为未来的需要筹措补给品，就得采取某种特殊方法……为达此目的，必须设法从国土的边远部分筹粮筹款……最好的办法是向那些地区发布通告，照知居民缴纳其摊派的份额，违者军法从事”。为收集特别税，通常派出由军官率领的20-30人的小队，如收不到税，则地方官员们的房屋或遭抢劫，或被烧光。 收集钱款后，即采取软硬兼施的办法，按军队军需官适当规定的份格，购买或征用补给品。如附近有敌人，征发工作就会加快，以防备敌人逼近；在通常情况下，则不慌不忙地进行整个工作，在一个地方长驻下去，直到周围地区的资源耗尽用光为止。首先发生短缺的物资总是饲料，一旦饲料短缺，军队就收集尚存的补给品，撤除营地，向另一地区进发。 这种“吃光”战略不需要有很大的后勤组织机构，但一当围城战的持续时间超过预计，就一定会发生问题。在周围地区资源耗尽之前拿下城镇，是战争的一个根本问题。如果没法劝服...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/09/15/ECON2252-Lecture-2-1/" title="ECON2252 Lecture 2 (1)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-15</div><div class="info-item-2">ECON2252 Lecture 2 (1)</div></div><div class="info-2"><div class="info-item-1">本章主要内容：  为了更正式地研究贸易收益，本章介绍了最简单的贸易模型之一，即基于比较优势的新古典贸易模型： 两个国家，拥有不同数量的两种商品。 主要问题：谁和谁交易什么？谁获利谁亏损？   简单的理论强调了贸易收益的来源：贸易就像一项新技术，能让每个国家将其原有的禀赋转化成更受消费者重视的东西。 本章核心：贸易不是零和博弈，是共赢！  学习目标：  能解决效用最大化问题，并根据市场出清确定相对价格。 理解为什么国家之间要贸易并且能从贸易中获益。 理解比较优势的概念，它是如何决定贸易的，为什么它能决定贸易？ 比较优势和绝对优势相比有哪些不同？ 在交换经济中，比较优势是如何确定的？    术语把经济模型想象成是一台将输入（input）转化成输出（output）的机器，其中  输入：偏好（preference）、禀赋（endowment）、技术（technology）、市场结构（market structure）… 输出：均衡价格（equilibrium price）、消费（consumption）…  我们将输入当作是外生的（exogenous），也就是说，将其定义为由既定的环境决...</div></div></div></a><a class="pagination-related" href="/2025/09/25/ECON2252-Lecture-2-2/" title="ECON2252 Lecture 2 (2)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-25</div><div class="info-item-2">ECON2252 Lecture 2 (2)</div></div><div class="info-2"><div class="info-item-1">在上一篇中我们讨论了封闭经济下的国家 Home，我们的主要目的是为了给接下来讨论的两种模型提供一个基准参考，看看国家 Home 是否真的能从贸易中获益。 这一篇笔记将讨论小型开放经济体（Small Open Economy, SOE），我们将看到，贸易条件下的国内状况不会比自给自足更糟糕。因为它始终都有是否消费其自身禀赋的选择。总体而言，在贸易的背景下，国家 Home 的境况会更好。因为贸易允许其将禀赋转化为消费者更青睐的东西。 小型开放经济体（Small Open Economy）现在我们假设国家 Home 不再是处于自给自足中了，现在 Home 是一个小型开放经济体：  开放（open）：意味着国家可以以世界价格 $p_1^W,p_2^W$ 买进或卖出 $C_1,C_2$ 。 小型（small）：意味着 Home 还没有能力影响世界市场的价格。  SOE 的框架是贸易模型中一个有用的工具，它允许我们在不考虑世界价格的前提下研究贸易带来的影响，也是世界市场出清的一个摘要。 我们想要弄清楚的问题如下：  贸易有好处吗？ 在国家 Home 中的家庭，它们的状况相比自给自足的封闭经济...</div></div></div></a><a class="pagination-related" href="/2025/09/12/ECON2252-Lecture-1/" title="ECON2252 Lecture 1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-12</div><div class="info-item-2">ECON2252 Lecture 1</div></div><div class="info-2"><div class="info-item-1">本章主要内容：  学习动机 为什么要学习国际贸易？ 为什么现在要学习国际贸易？   基本事实 国家之间贸易什么东西？ 谁和谁贸易？ 商品是怎么贸易的？   一些大的问题 为什么各国要进行贸易？ 在贸易中谁受益谁受损？ 贸易该如何被调节？   模型和方法 经济学家们是如何研究国际贸易的？ 有哪些国际贸易模型？     学习目标：  理解贸易在现代经济中的重要性。 理解国际贸易的特征和规律：Gravity Model。 理论框架的概览。 为什么你要上这门课？  Introduction本节的其他内容目前来看并不重要，感觉主要是科普向，也许上完 tutorial 后会补充一些。至少现阶段，本章最重要的是介绍了贸易引力模型（gravity model）。 贸易引力模型可以很好地介绍双边贸易（bilateral trade），模型如下  E_{ij}=\frac{A(Y_i)^a(Y_j)^b}{(D_ij)^c} $E_{ij}$ ：$i$ 到 $j$ 的出口（exports）； $Y_i$ ：国家 $i$ 的GDP； $Y_j$ ：国家 $j$ 的GDP； $D_{ij}$ ：国家 $...</div></div></div></a><a class="pagination-related" href="/2025/09/25/ECON2252-Lecture-2-3/" title="ECON2252 Lecture 2 (3)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-25</div><div class="info-item-2">ECON2252 Lecture 2 (3)</div></div><div class="info-2"><div class="info-item-1">对于小国而言，上节讨论的 SOE 模式是合理的。但对于大国之间的贸易，SOE 是否还适用呢？在这里，“大国”指的是国家之间的贸易可以影响世界市场价格。 两国模式（Two-country Model）我们的假设如下：  考虑两个国家，Home 和 Foreign； 这两国拥有的禀赋依然是固定的： Home 拥有 $X_1^H$ 单位个商品 1 ，$X_2^H$ 单位个商品 2 . Foreign 拥有 $X_1^F$ 单位个商品 1 ，$X_2^F$ 单位个商品 2 .   这些禀赋依然是由两国中的代表性家庭持有； 这两国的代表性家庭消费偏好完全相同；  乍一看，好像我们的假设与之前并没有什么不一样的，但这里有一个关键区别：我们将为世界市场价格如何决定建模。 现在，Home 和 Foreign 之间被允许交易它们持有的禀赋，我们想要弄清楚的关键问题如下：  它们之间会交易吗？ 它们分别会出口和进口哪种商品？ 哪个国家会受益，哪个国家会吃亏？ 有多少商品会被交易？又以什么价格？   想要回答上述问题，我们需要引入比较优势的概念，这是贸易理论中最基础的概念之一。 总的来说，对于一个国家...</div></div></div></a><a class="pagination-related" href="/2025/10/09/ECON2252-Lecture-3-1/" title="ECON2252 Lecture 3 (1)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-10-09</div><div class="info-item-2">ECON2252 Lecture 3 (1)</div></div><div class="info-2"><div class="info-item-1">上节中我们学习了交换经济模型，我们知道了：  贸易允许国家通过交换它们的禀赋获益。 国家出口它们拥有比较优势的商品。  但交换经济模型并没有解释禀赋是哪里来的，尽管我们可以说禀赋来自自然资源，但实际中工业产品占了国际贸易的绝大部分比重，因此我们不禁发问：生产力和科技是如何塑造贸易模式的？贸易又是如何影响工资和就业的？ 为了解答上述问题，我们将交换模型延伸——加入生产要素。本节中我们只考虑一种生产要素：劳动力。 本章核心：  贸易是有益的，因为各国的技术水平存在差距。 技术差异可以成为比较优势的来源。 因此各国会出口其相对更擅长生产的产品。 从更大的尺度上来说，国际贸易即国际分工，约束贸易会降低资源分配效率。  学习目标：  学习如何解决企业问题，并将价格与生产率联系起来。 理解由于劳动力具有流动性，各部门的工资率为何需要相等。 理解生产可能性边界 (Production Possibility Frontier, PPF)。   理解相对生产率如何决定比较优势。 理解为什么福利可以用实际工资来衡量。  由于我们是延伸拓展之前的介绍过的模型，所以本节结构将与上节类似（Closed ...</div></div></div></a><a class="pagination-related" href="/2025/10/09/ECON2252-Lecture-3-2/" title="ECON2252 Lecture 3 (2)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-10-09</div><div class="info-item-2">ECON2252 Lecture 3 (2)</div></div><div class="info-2"><div class="info-item-1">Small Open Economy现在，我们假设 Home 可以以世界市场价格 $p_1^W,p_2^W$ 交易，假设与上节基本相同。 在生产方面，我们假设 Home 同时生产商品 1 和 2 （我们在接下来的讨论中会看到这是不可能的）。 回顾前文所提的零利润条件  \begin{align} & p_1^W=\frac{w^H}{a_1^H} \\ & p_2^W=\frac{w^H}{a_2^H} \end{align}因此，世界相对价格 $p_r^W \equiv p_1^W/p_2^W$ 必须满足  p_r^W=\frac{1}{a_r^H}=p_r^H我们看到，世界相对价格与自给自足下的 Home 相对价格是完全相等的。 我们回忆上节的内容，在 SOE 下，只有当世界相对价格与自给自足相对价格不同时，贸易才可能发生。所以，在上述我们设置的情景中（Home 同时生产商品 1 和 2），Home 无法从贸易中获得任何利益。 那么，在李嘉图模型中，贸易究竟是如何产生的呢？ 这里的关键在于，随着贸易开放，所有工人都可能在一个部门就业。也即是说，实现完全专业化变得可能，一国对另...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/my_images/old_guard.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Old Guard</div><div class="author-info-description">寒窗语剑，雨打芭蕉</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">19</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Old-Guardian"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="/rick6121@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">部分课程笔记由于Slide Policy暂时无法公开，我正在努力删改行文使其成为完整的博文。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Closed-Economy-Model"><span class="toc-text">Closed Economy Model</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Demand"><span class="toc-text">Demand</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Budget-Set"><span class="toc-text">Budget Set</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Utility-Maximization"><span class="toc-text">Utility Maximization</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Relative-Demand"><span class="toc-text">Relative Demand</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Production"><span class="toc-text">Production</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Marginal-Products"><span class="toc-text">Marginal Products</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Production-Possibilities-Frontier"><span class="toc-text">Production Possibilities Frontier</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Profit-Maximization"><span class="toc-text">Profit Maximization</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Market-Clearing"><span class="toc-text">Market Clearing</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Determination-of-Wages"><span class="toc-text">Determination of Wages</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Determination-of-Rental-Rates"><span class="toc-text">Determination of Rental Rates</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Relative-Supply"><span class="toc-text">Relative Supply</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Determination-of-relative-goods-price"><span class="toc-text">Determination of relative goods price</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-post-series"><div class="item-headline"><i class="fa-solid fa-layer-group"></i><span>系列文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/19/ECON2252-Lecture-4-1/" title="ECON2252 Lecture 4 (1)">ECON2252 Lecture 4 (1)</a><time datetime="2025-10-19T11:37:49.000Z" title="发表于 2025-10-19 19:37:49">2025-10-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/ECON2252-Lecture-3-3/" title="ECON2252 Lecture 3 (3)">ECON2252 Lecture 3 (3)</a><time datetime="2025-10-09T06:26:03.000Z" title="发表于 2025-10-09 14:26:03">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/ECON2252-Lecture-3-2/" title="ECON2252 Lecture 3 (2)">ECON2252 Lecture 3 (2)</a><time datetime="2025-10-09T06:20:39.000Z" title="发表于 2025-10-09 14:20:39">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/ECON2252-Lecture-3-1/" title="ECON2252 Lecture 3 (1)">ECON2252 Lecture 3 (1)</a><time datetime="2025-10-09T06:10:46.000Z" title="发表于 2025-10-09 14:10:46">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/25/ECON2252-Lecture-2-3/" title="ECON2252 Lecture 2 (3)">ECON2252 Lecture 2 (3)</a><time datetime="2025-09-25T05:12:26.000Z" title="发表于 2025-09-25 13:12:26">2025-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/25/ECON2252-Lecture-2-2/" title="ECON2252 Lecture 2 (2)">ECON2252 Lecture 2 (2)</a><time datetime="2025-09-25T03:27:49.000Z" title="发表于 2025-09-25 11:27:49">2025-09-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/15/ECON2252-Lecture-2-1/" title="ECON2252 Lecture 2 (1)">ECON2252 Lecture 2 (1)</a><time datetime="2025-09-15T13:47:34.000Z" title="发表于 2025-09-15 21:47:34">2025-09-15</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/12/ECON2252-Lecture-1/" title="ECON2252 Lecture 1">ECON2252 Lecture 1</a><time datetime="2025-09-12T10:44:33.000Z" title="发表于 2025-09-12 18:44:33">2025-09-12</time></div></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/19/ECON2252-Lecture-4-1/" title="ECON2252 Lecture 4 (1)">ECON2252 Lecture 4 (1)</a><time datetime="2025-10-19T11:37:49.000Z" title="发表于 2025-10-19 19:37:49">2025-10-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/%E4%B8%A4%E4%B8%AA%E4%B8%96%E7%BA%AA%E7%9A%84%E8%83%8C%E6%99%AF%EF%BC%88%E4%BA%8C%EF%BC%89/" title="两个世纪的背景（二）">两个世纪的背景（二）</a><time datetime="2025-10-09T06:40:31.000Z" title="发表于 2025-10-09 14:40:31">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/%E4%B8%A4%E4%B8%AA%E4%B8%96%E7%BA%AA%E7%9A%84%E8%83%8C%E6%99%AF%EF%BC%88%E4%B8%80%EF%BC%89/" title="两个世纪的背景（一）">两个世纪的背景（一）</a><time datetime="2025-10-09T06:33:45.000Z" title="发表于 2025-10-09 14:33:45">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/ECON2252-Lecture-3-3/" title="ECON2252 Lecture 3 (3)">ECON2252 Lecture 3 (3)</a><time datetime="2025-10-09T06:26:03.000Z" title="发表于 2025-10-09 14:26:03">2025-10-09</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/09/ECON2252-Lecture-3-2/" title="ECON2252 Lecture 3 (2)">ECON2252 Lecture 3 (2)</a><time datetime="2025-10-09T06:20:39.000Z" title="发表于 2025-10-09 14:20:39">2025-10-09</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Old Guard</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img no-lazy src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img no-lazy src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img no-lazy src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img no-lazy src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img no-lazy src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'zzo156Cm1zpw5nKvboBcJNtr-MdYXbMMI',
+      appKey: 'aRLuqo6CJWxtMe30IVosSSq4',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
