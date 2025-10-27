@@ -1,0 +1,391 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Theorem 1.8 &amp; 1.9 | Old Guard's Blogs</title><meta name="author" content="Old Guard"><meta name="copyright" content="Old Guard"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本篇主要介绍关于凸函数的性质。 Theorem 1.8 For a convex function, we have the following statements:  A function f defined on a convex set Ω is convex if and only if for any integer k ≥ 2, any x1, x2, ..., xk ∈">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Theorem 1.8 &amp; 1.9">
+<meta property="og:url" content="https://old-guardian.github.io/2025/10/27/Theorem-1-8-1-9/index.html">
+<meta property="og:site_name" content="Old Guard&#39;s Blogs">
+<meta property="og:description" content="本篇主要介绍关于凸函数的性质。 Theorem 1.8 For a convex function, we have the following statements:  A function f defined on a convex set Ω is convex if and only if for any integer k ≥ 2, any x1, x2, ..., xk ∈">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://old-guardian.github.io/my_images/old_guard.jpg">
+<meta property="article:published_time" content="2025-10-27T06:40:42.000Z">
+<meta property="article:modified_time" content="2025-10-27T06:40:42.000Z">
+<meta property="article:author" content="Old Guard">
+<meta property="article:tag" content="数学">
+<meta property="article:tag" content="优化理论">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://old-guardian.github.io/my_images/old_guard.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Theorem 1.8 & 1.9",
+  "url": "https://old-guardian.github.io/2025/10/27/Theorem-1-8-1-9/",
+  "image": "https://old-guardian.github.io/my_images/old_guard.jpg",
+  "datePublished": "2025-10-27T06:40:42.000Z",
+  "dateModified": "2025-10-27T06:40:42.000Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Old Guard",
+      "url": "https://old-guardian.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://old-guardian.github.io/2025/10/27/Theorem-1-8-1-9/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":230,"highlightFullpage":false,"highlightMacStyle":true},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Theorem 1.8 & 1.9',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/footer.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div id="web_bg" style="background-image: url(/my_images/my_default_top_image.jpg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/my_images/old_guard.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Old Guard's Blogs</span></a><a class="nav-page-title" href="/"><span class="site-name">Theorem 1.8 &amp; 1.9</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> Home</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> Archives</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> Tags</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> Categories</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">Theorem 1.8 &amp; 1.9</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-10-27T06:40:42.000Z" title="发表于 2025-10-27 14:40:42">2025-10-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-10-27T06:40:42.000Z" title="更新于 2025-10-27 14:40:42">2025-10-27</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E8%AF%BE%E7%A8%8B%E7%AC%94%E8%AE%B0/">课程笔记</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">总字数:</span><span class="word-count">677</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>2分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span><span class="post-meta-separator">|</span><span class="post-meta-commentcount"><i class="far fa-comments fa-fw post-meta-icon"></i><span class="post-meta-label">评论数:</span><a href="/2025/10/27/Theorem-1-8-1-9/#post-comment" itemprop="discussionUrl"><span class="valine-comment-count" data-xid="/2025/10/27/Theorem-1-8-1-9/" itemprop="commentCount"><i class="fa-solid fa-spinner fa-spin"></i></span></a></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><div class="top-img gist" style="background-image: url(/null)"></div><article class="container post-content" id="article-container"><p>本篇主要介绍关于凸函数的性质。</p>
+<h1 id="theorem-1.8">Theorem 1.8</h1>
+<p>For a convex function, we have the following statements:</p>
+<ol type="i">
+<li>A function f defined on a convex set <span
+class="math inline"><em>Ω</em></span> is convex if and only if for any
+integer <span class="math inline"><em>k</em> ≥ 2</span>, any <span
+class="math inline"><strong>x</strong><sub>1</sub>, <strong>x</strong><sub>2</sub>, ..., <strong>x</strong><sub><em>k</em></sub> ∈ <em>Ω</em></span>,
+and any non-negative <span
+class="math inline"><em>α</em><sub>1</sub>, ..., <em>α</em><sub><em>k</em></sub></span>
+with <span class="math inline">$\sum_{i=1}^k \alpha_i = 1$</span>, there
+holds</li>
+</ol>
+<p><span class="math display">$$
+f(\sum_{i=1}^k \alpha_i \mathbf{x}_i ) \le \sum_{i=1}^k \alpha_i
+f(\mathbf{x}_i)
+$$</span></p>
+<ol start="2" type="i">
+<li>Let <span class="math inline"><em>f</em></span> be a convex function
+defined on a convex set <span class="math inline"><em>Ω</em></span> .
+Then <span class="math inline"><em>f</em></span> is continuous at every
+interior point of <span class="math inline"><em>Ω</em></span>.</li>
+</ol>
+<h2 id="i">(i)</h2>
+<p>我们先理解表达式的各个部分：</p>
+<ul>
+<li><span class="math inline">$\sum_{i=1}^k \alpha_i
+\mathbf{x}_i$</span> ：这是多个点的<strong>凸组合</strong>。</li>
+<li><span class="math inline">$\sum_{i=1}^k \alpha_i
+f(\mathbf{x}_i)$</span> ：这是函数值的<strong>加权平均</strong>。</li>
+</ul>
+<p>所以，这个不等式的含义就是：<strong>函数在凸组合点的值 <span
+class="math inline">≤</span> 函数值的凸组合</strong>。</p>
+<p>这个不等式叫做 Jensen 不等式，它实际上是 Definition 1.6
+中凸函数定义的<strong>多元推广</strong>。</p>
+<p>几何上来说，</p>
+<ul>
+<li>点 <span class="math inline">$\sum_{i=1}^k \alpha_i
+\mathbf{x}_i$</span> 位于这些点构成的<strong>凸包</strong>内；</li>
+<li><span class="math inline">$\sum_{i=1}^k \alpha_i
+f(\mathbf{x}_i)$</span> 是连接各点 <span
+class="math inline">(<strong>x</strong><sub><em>i</em></sub>, <em>f</em>(<strong>x</strong><sub><em>i</em></sub>))</span>
+的<strong>超平面</strong>在该点的值。</li>
+<li>不等式说明：<strong>函数的图像在整个凸包内部都位于支撑超平面的下方</strong>。</li>
+</ul>
+<h1 id="theorem-1.9">Theorem 1.9</h1>
+<p>Let <span class="math inline"><em>f</em></span> and <span
+class="math inline"><em>g</em></span> be two convex functions on the
+convex set <span class="math inline"><em>Ω</em></span>. Then the
+following statements hold:</p>
+<ol type="i">
+<li><span class="math inline"><em>f</em> + <em>g</em></span> is convex
+on <span class="math inline"><em>Ω</em></span>.</li>
+<li><span class="math inline"><em>c</em><em>f</em></span> is convex for
+any constant <span class="math inline"><em>c</em> &gt; 0</span>.</li>
+<li><span
+class="math inline"><em>Γ</em> = {<strong>x</strong> : <strong>x</strong> ∈ <em>Ω</em>
+and <em>f</em>(<strong>x</strong>) ≤ <em>c</em>}</span> is a convex set
+for any <span class="math inline"><em>c</em></span>.</li>
+</ol>
+<h2 id="iii">(iii)</h2>
+<p>第三条描述的是<strong>凸函数的水平集（level
+set）</strong> 的重要性质。</p>
+<p>这个定理说的是，对于凸函数 <span
+class="math inline"><em>f</em></span> 和任意常数 <span
+class="math inline"><em>c</em></span> ，集合 <span
+class="math inline"><em>Γ</em> = {<strong>x</strong> : <strong>x</strong> ∈ <em>Ω</em>
+and <em>f</em>(<strong>x</strong>) ≤ <em>c</em>}</span> 是一个凸集。</p>
+<p>这个凸集被称为函数 <span class="math inline"><em>f</em></span> 的
+<strong><span class="math inline"><em>c</em></span>
+水平集</strong>，它包含了所有函数值不超过 <span
+class="math inline"><em>c</em></span> 的点。</p>
+<p>我们可以想象：</p>
+<ul>
+<li>想象一个凸函数的图像，像一个碗形曲面。</li>
+<li>用一个水平平面 <span
+class="math inline"><em>z</em> = <em>c</em></span> 去切割这个曲面。</li>
+<li>切割后，曲面上所有低于或等于这个平面的点构成的集合就是 <span
+class="math inline"><em>Γ</em></span> 。</li>
+<li>定理说：<strong>这个切割出来的区域一定是凸的</strong>。</li>
+</ul>
+<p>这个定理的重要意义之一在于<strong>构造可行域</strong>。</p>
+<p>在约束优化问题中，我们常常处理这样的问题：</p>
+<p><span class="math display">$$
+\begin{aligned}
+&amp;\text{Minimize}\enspace g(x) \\
+&amp;\text{subject to}\enspace f_i(x)\le 0,\enspace i=1,\ldots,m
+\end{aligned}
+$$</span></p>
+<p>如果所有约束函数 <span
+class="math inline"><em>f</em><sub><em>i</em></sub></span> 都是凸函数，那么：</p>
+<ul>
+<li>每个约束 <span
+class="math inline"><em>f</em><sub><em>i</em></sub>(<em>x</em>) ≤ 0</span> 实际上都定义了一个凸集（取 <span
+class="math inline"><em>c</em> = 0</span> 的水平集）。</li>
+<li>可行域是这些凸集的交集。</li>
+<li><strong>凸集的交集仍是凸集</strong>，所以整个可行域是凸的。</li>
+</ul>
+<p>这就保证了我们处理的是<strong>凸优化问题</strong>，具有很好的性质（局部最优=全局最优）。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://old-guardian.github.io">Old Guard</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://old-guardian.github.io/2025/10/27/Theorem-1-8-1-9/">https://old-guardian.github.io/2025/10/27/Theorem-1-8-1-9/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://old-guardian.github.io" target="_blank">Old Guard's Blogs</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%95%B0%E5%AD%A6/">数学</a><a class="post-meta__tags" href="/tags/%E4%BC%98%E5%8C%96%E7%90%86%E8%AE%BA/">优化理论</a></div><div class="post-share"><div class="social-share" data-image="/my_images/old_guard.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2025/10/27/Theorem-1-10/" title="Theorem 1.10"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">Theorem 1.10</div></div><div class="info-2"><div class="info-item-1">这个定理是凸分析中极其重要的一阶最优性条件。 Let f ∈ C1. Then f is convex over a convex set Ω iff f(y) ≥ f(x) + ∇f(x)T(y − x) for all x, y ∈ Ω. 代数解释 我们来看这个不等式：  左边：f(y) 是函数在点 y 处的真实值。 右边第一项：f(x) 是函数在参考点 x 处的值。 右边第二项：∇f(x)T(y − x) 是梯度方向的变化率估计。  这个式子有点眼熟？我们回忆一阶泰勒展开： f(x* + d) = f(x*) + ∇f(x*)Td 可以看到，由于方向向量 d 实际上就是 (y − x) 得来的，所以不等式的右边实际上是一阶泰勒展开，定理说：凸函数的一阶泰勒展开是函数的全局下界估计。 几何解释 我们首先看二维情况： 考虑一个一元凸函数 f(x) ：  在任意点 x0 处，函数的切线方程是：y = f(x0) + f′(x0)(x − x0) 。 所以，此时定理的意思是：凸函数 f(x) 的图像始终位于其任意切线的上方： ...</div></div></div></a><a class="pagination-related" href="/2025/10/19/ECON2252-Lecture-4-1/" title="ECON2252 Lecture 4 (1)"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">ECON2252 Lecture 4 (1)</div></div><div class="info-2"><div class="info-item-1">到目前为止，我们学习过的模型都告诉我们，贸易是有益的。但是，在现实中，为什么这么多人反对贸易？ 在上节我们学习的李嘉图模型中，有一个关键假设：劳动力是自由流动的。也就是说，在李嘉图模型中，只要国家开放贸易，劳动者就会立刻被重新分配到具有比较优势的产业，因此所有人都可以从贸易中获益。 然而，这个假设是很难成立的。在现实中，我们常常看到劳动者被困在他们原本的产业中，而这些产业往往并不是具有比较优势的产业，所以这些劳动者是无法享受贸易带来的全部好处的。 因此，接下来我们将讨论国际贸易的分配结果，我们主要聚焦下面两个问题：  我们该如何为此建模？ 这对贸易有何政策含义？  本章核心：  总体而言，贸易是有益的。 但这些收益在不同群体之间的分配可能不均衡。 特别是，一些群体可能会受益，而一些群体可能会受损。 我们不应因为一些群体受损而停止全球化。  为了研究上述问题，我们将继续延伸李嘉图模型，加入一个新的生产要素——资本。我们假设：  资本是特定于某个行业的。 要素的特殊性通常是短期的。 模型将会允许我们研究对于不同的要素，贸易是如何影响收入的。 ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/09/17/Definition-1-1/" title="Definition 1.1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">Definition 1.1</div></div><div class="info-2"><div class="info-item-1">该定义定义了什么是极小值点，定义如下： A point x* ∈ Ω is called a local minimum point of f over Ω if there exists δ &gt; 0 such that f(x*) ≤ f(x) ∀ x ∈ Ω with ||x − x*|| &lt; δ. 通俗理解 设想我们是一座山区中的一个点，现在我们要判断我们所在的位置 x* 是不是一个“局部山谷”，即局部最低点。 我们来一条一条拆解上面的定义：  x* ∈ Ω ：我们（一个点）必须站在我们所关心的这一座山区中（Ω）。 if there exists δ &gt; 0 such that…：存在一个距离（比如10米），让我们能画出一个圈子。这个圈子不用很大，哪怕只是一个非常小的范围（比如周围 1 米）也足够。关键是​​存在这么一个圈子​​。 ||x − x*|| &lt; δ ：这是用来确定“圈子”里的点。||x − x*|| 表示另一个点 x 和我们所在的位置 x* 之间的距离（就像我们之前讨论的，这是向量的长度/距离）。 &l...</div></div></div></a><a class="pagination-related" href="/2025/10/27/Theorem-1-10/" title="Theorem 1.10"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-10-27</div><div class="info-item-2">Theorem 1.10</div></div><div class="info-2"><div class="info-item-1">这个定理是凸分析中极其重要的一阶最优性条件。 Let f ∈ C1. Then f is convex over a convex set Ω iff f(y) ≥ f(x) + ∇f(x)T(y − x) for all x, y ∈ Ω. 代数解释 我们来看这个不等式：  左边：f(y) 是函数在点 y 处的真实值。 右边第一项：f(x) 是函数在参考点 x 处的值。 右边第二项：∇f(x)T(y − x) 是梯度方向的变化率估计。  这个式子有点眼熟？我们回忆一阶泰勒展开： f(x* + d) = f(x*) + ∇f(x*)Td 可以看到，由于方向向量 d 实际上就是 (y − x) 得来的，所以不等式的右边实际上是一阶泰勒展开，定理说：凸函数的一阶泰勒展开是函数的全局下界估计。 几何解释 我们首先看二维情况： 考虑一个一元凸函数 f(x) ：  在任意点 x0 处，函数的切线方程是：y = f(x0) + f′(x0)(x − x0) 。 所以，此时定理的意思是：凸函数 f(x) 的图像始终位于其任意切线的上方： ...</div></div></div></a><a class="pagination-related" href="/2025/09/17/Theorem-1-1/" title="Theorem 1.1"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">Theorem 1.1</div></div><div class="info-2"><div class="info-item-1">该定理指出了极值点和不同阶导数之间的关系，定理内容如下： If f(k)(x*) = 0 for k = 1, 2, ..., n, f(n + 1)(x*) ≠ 0, and f(n + 1)(x) is continuous in a neighborhood of x*, then x* is a local extremum iff n + 1 is even. Furthermore, for even n + 1, if f(n + 1)(x*) &gt; 0, then x* is a local minimum; if f(n + 1)(x*) &lt; 0, then x* is a local maximum. 通俗理解 该定理处理的是这样一种特殊情况：我们找到了一个临界点 x* ，即一阶导数 f′(x*) = 0 ，但当我们用传统的二阶导数测试时，发现二阶导数竟然也是零，即 f″(x*) = 0 。 这时我们该怎么办？这个定理告诉我们，继续求更高阶的导数，直到找到一个​​不为零的导数​​。这个第一个不为零的导数的​​阶数​​...</div></div></div></a><a class="pagination-related" href="/2025/10/27/Theorem-1-13/" title="Theorem 1.13"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-10-27</div><div class="info-item-2">Theorem 1.13</div></div><div class="info-2"><div class="info-item-1">本节主要介绍一些关于凸函数最小值的经典结论。 Let f be a convex function defined on a convex set Ω. Then  the set where f achieves minimum is convex; any local minimum point of f is also a global minimum point.  结论1：最小值点构成的集合是凸集 这一点实际上可以由 Theorem 1.9 中的 (iii) 轻松地推导出来，几何上也很好理解： 想象一个凸函数的图像，例如碗形：  最小值可能在一个点（严格凸情况）； 或者在一个平坦区域（非严格凸）； 但不会出现两个分离的点都是最小值。  意义 这个结论大致有两个重要意义：  算法设计   如果算法收敛到最小值点，不用担心会”错过”其他分离的最小值区域； 所有最小值点都是”连通”的，算法可以在它们之间自由移动。   实际应用   如果多个配置都是最优的，那么它们的任何混合也是最优的。  结论2：局部最小值 ...</div></div></div></a><a class="pagination-related" href="/2025/10/27/Theorem-1-11-Theorem-1-12/" title="Theorem 1.11 &amp; Theorem 1.12"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-10-27</div><div class="info-item-2">Theorem 1.11 &amp; Theorem 1.12</div></div><div class="info-2"><div class="info-item-1">本节主要介绍凸分析的二阶条件。 Theorem 1.11 Let f ∈ C2. Then f is a convex function over a convex set Ω containing an interior point iff the Hessian matrix ∇2f(x) of f is positive semi-definite throughout Ω. 这个定理的意思是： 对于二阶连续可微函数 f ∈ C2 ，在凸集 Ω 上是凸函数的充要条件是：  Hessian 矩阵 ∇2f(x) 在整个 Ω 上半正定。   在几何上，这等价于：  函数在任意点处的曲率都是非负的； 函数没有”向下弯曲”的部分； 在任意方向上的二阶导数都是非负的；  意义 二阶条件是判断函数凸性最常用的方法：  计算 Hessian 矩阵， 验证其在定义域内是否半正定， 比用定义验证简单得多。  Corollary 1.11.1 Let f ∈ C2 be a single variable function def...</div></div></div></a><a class="pagination-related" href="/2025/09/17/Theorem-1-2/" title="Theorem 1.2 &amp; 1.3"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-09-17</div><div class="info-item-2">Theorem 1.2 &amp; 1.3</div></div><div class="info-2"><div class="info-item-1">Theorem 1.2 该定理描述的是多元函数沿着某个方向的变化率（即方向导数）与其梯度之间的关系。 定理内容如下： Let f ∈ C1 and let x(α) = x* + αd and g(α) = f(x(α)). Then g′(α) = ∇f(x(α))Td 其中  f ∈ C1：表示函数 f 是一个连续可微的多元函数，意味着它的所有一阶偏导数都存在且连续，这是使用梯度的前提条件。 x*：我们正在研究的一个基点，是一个具体的坐标点。 d：是一个方向向量。它决定了我们从基点 x* 出发，要往哪个方向看函数的变化。 α：是一个标量参数，可以理解为沿着方向 d 走的“步长”。当 α = 0 时，我们就在基点 x*；当 α 增大时，我们就沿着 d 的方向移动。 x(α) = x* + αd：这定义了一条直线（或称为路径、射线）。这个参数方程描述了所有从 x* 点出发，沿着 d 方向的所有点。 g(α) = f(x(α))：将 f 这个多元函数限制在了这条直线路径上。因此，g(α) 是一个一元函数，其自变量是步长 α。我们不再研究 f 在...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/my_images/old_guard.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Old Guard</div><div class="author-info-description">寒窗语剑，雨打芭蕉</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">24</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">13</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">3</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Old-Guardian"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="/rick6121@qq.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">部分课程笔记由于Slide Policy暂时无法公开，我正在努力删改行文使其成为完整的博文。</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#theorem-1.8"><span class="toc-text">Theorem 1.8</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#i"><span class="toc-text">(i)</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#theorem-1.9"><span class="toc-text">Theorem 1.9</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#iii"><span class="toc-text">(iii)</span></a></li></ol></li></ol></div></div><div class="card-widget card-post-series"><div class="item-headline"><i class="fa-solid fa-layer-group"></i><span>系列文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-14-Theorem-1-15/" title="Theorem 1.14 &amp; Theorem 1.15">Theorem 1.14 &amp; Theorem 1.15</a><time datetime="2025-10-27T06:56:34.000Z" title="发表于 2025-10-27 14:56:34">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-13/" title="Theorem 1.13">Theorem 1.13</a><time datetime="2025-10-27T06:53:17.000Z" title="发表于 2025-10-27 14:53:17">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-11-Theorem-1-12/" title="Theorem 1.11 &amp; Theorem 1.12">Theorem 1.11 &amp; Theorem 1.12</a><time datetime="2025-10-27T06:49:28.000Z" title="发表于 2025-10-27 14:49:28">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-10/" title="Theorem 1.10">Theorem 1.10</a><time datetime="2025-10-27T06:45:22.000Z" title="发表于 2025-10-27 14:45:22">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-8-1-9/" title="Theorem 1.8 &amp; 1.9">Theorem 1.8 &amp; 1.9</a><time datetime="2025-10-27T06:40:42.000Z" title="发表于 2025-10-27 14:40:42">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/Theorem-1-5-1-7/" title="Theorem 1.5-1.7">Theorem 1.5-1.7</a><time datetime="2025-10-02T09:31:14.000Z" title="发表于 2025-10-02 17:31:14">2025-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/02/Theorem-1-3-1-4/" title="Theorem 1.4">Theorem 1.4</a><time datetime="2025-10-02T09:16:53.000Z" title="发表于 2025-10-02 17:16:53">2025-10-02</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/17/Theorem-1-2/" title="Theorem 1.2 &amp; 1.3">Theorem 1.2 &amp; 1.3</a><time datetime="2025-09-17T13:12:41.000Z" title="发表于 2025-09-17 21:12:41">2025-09-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/17/Theorem-1-1/" title="Theorem 1.1">Theorem 1.1</a><time datetime="2025-09-17T11:38:33.000Z" title="发表于 2025-09-17 19:38:33">2025-09-17</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/09/17/Definition-1-1/" title="Definition 1.1">Definition 1.1</a><time datetime="2025-09-17T11:27:30.000Z" title="发表于 2025-09-17 19:27:30">2025-09-17</time></div></div></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-14-Theorem-1-15/" title="Theorem 1.14 &amp; Theorem 1.15">Theorem 1.14 &amp; Theorem 1.15</a><time datetime="2025-10-27T06:56:34.000Z" title="发表于 2025-10-27 14:56:34">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-13/" title="Theorem 1.13">Theorem 1.13</a><time datetime="2025-10-27T06:53:17.000Z" title="发表于 2025-10-27 14:53:17">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-11-Theorem-1-12/" title="Theorem 1.11 &amp; Theorem 1.12">Theorem 1.11 &amp; Theorem 1.12</a><time datetime="2025-10-27T06:49:28.000Z" title="发表于 2025-10-27 14:49:28">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-10/" title="Theorem 1.10">Theorem 1.10</a><time datetime="2025-10-27T06:45:22.000Z" title="发表于 2025-10-27 14:45:22">2025-10-27</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/10/27/Theorem-1-8-1-9/" title="Theorem 1.8 &amp; 1.9">Theorem 1.8 &amp; 1.9</a><time datetime="2025-10-27T06:40:42.000Z" title="发表于 2025-10-27 14:40:42">2025-10-27</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By Old Guard</span></div><div class="footer_custom_text"><p><a style="margin-inline:5px"target="_blank" href="https://hexo.io/"><img no-lazy src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为 Hexo" alt="HEXO"></a><a style="margin-inline:5px"target="_blank" href="https://butterfly.js.org/"><img no-lazy src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用 Butterfly" alt="Butterfly"></a><a style="margin-inline:5px"target="_blank" href="https://www.jsdelivr.com/"><img no-lazy src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用 Jsdelivr 为静态资源提供CDN加速" alt="Jsdelivr"></a><a style="margin-inline:5px"target="_blank" href="https://github.com/"><img no-lazy src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由 GitHub 托管" alt="GitHub"></a><a style="margin-inline:5px"target="_blank"href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img no-lazy src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" alt="img" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
+  const option = null
+
+  const initValine = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyValine = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    const valineConfig = {
+      el: '#vcomment',
+      appId: 'zzo156Cm1zpw5nKvboBcJNtr-MdYXbMMI',
+      appKey: 'aRLuqo6CJWxtMe30IVosSSq4',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      visitor: false,
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || window.location.pathname
+    }
+
+    new Valine(valineConfig)
+  }
+
+  const loadValine = async (el, path) => {
+    if (typeof Valine === 'function') {
+      initValine(el, path)
+    } else {
+      await btf.getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js')
+      initValine(el, path)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Valine' === 'Valine'
+      ? window.shuoshuoComment = { loadComment: loadValine }
+      : window.loadOtherComment = loadValine
+    return
+  }
+
+  if ('Valine' === 'Valine' || !false) {
+    if (false) btf.loadComment(document.getElementById('vcomment'),loadValine)
+    else setTimeout(loadValine, 0)
+  } else {
+    window.loadOtherComment = loadValine
+  }
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js"></script><script>POWERMODE.colorful = false;
+POWERMODE.shake = true;
+POWERMODE.mobile = false;
+document.body.addEventListener('input', POWERMODE);
+</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
